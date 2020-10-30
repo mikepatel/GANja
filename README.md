@@ -2,6 +2,8 @@
 ## Overview
 A GAN to create art
 
+![](https://github.com/mikepatel/GANja/blob/main/overview.png)
+
 ## Data
 * temporarily using [shoe images](https://github.com/mikepatel/GANja/tree/main/data/train), but this will change
 
