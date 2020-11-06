@@ -28,6 +28,13 @@ TO DO
 $ python style transfer/run.py
 ```
 
+## Preliminary results
+| Content image input | Style image input | Generated output image |
+:------------:|:------------:|:------------:
+![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content.jpg) | 
+![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style.jpg) | 
+![output]()
+
 ## Additional notes
 * currently not saving a trained model as training is still ongoing
 * will use a different dataset in the future, possibly from [WikiArt](https://www.wikiart.org/)
