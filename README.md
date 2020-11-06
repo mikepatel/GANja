@@ -2,6 +2,11 @@
 ## Overview
 A GAN to create art
 
+### Authors
+* John Jefferson III
+* Daniel Rodriguez
+* Michael Patel
+
 ## Data
 * TO DO
 
