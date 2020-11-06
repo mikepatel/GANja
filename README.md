@@ -1,6 +1,6 @@
 # GANja
 ## Overview
-A GAN to create art
+Use ML to create digital art
 
 ### Authors
 * John Jefferson III
@@ -8,7 +8,8 @@ A GAN to create art
 * Michael Patel
 
 ## Data
-* TO DO
+* Using images from Wikimedia commons
+* Sample images in [style transfer/data](https://github.com/mikepatel/GANja/tree/main/style%20transfer/data)
 
 ## Environment
 * Python 3.7
@@ -16,11 +17,16 @@ A GAN to create art
   * TensorFlow 2.1
 
 ## File descriptions
-* TO DO
+* [style transfer/run.py](https://github.com/mikepatel/GANja/blob/main/style%20transfer/run.py)
 
 ## Instructions
 ### To train model
 TO DO
+
+### To run model and generate output
+```
+$ python style transfer/run.py
+```
 
 ## Additional notes
 * currently not saving a trained model as training is still ongoing
