@@ -38,7 +38,7 @@ if __name__ == "__main__":
     # ----- ETL ----- #
     # ETL = Extraction, Transformation, Load
     # Content image
-    content_image_filename = "content_dog.jpg"
+    content_image_filename = "content.jpg"
     content_image_filepath = os.path.join(DATA_DIR, content_image_filename)
     content_image = Image.open(content_image_filepath)
 
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     content_image = np.expand_dims(content_image, axis=0)
 
     # Style image
-    style_image_filename = "style_kandinsky.jpg"
+    style_image_filename = "style.jpg"
     style_image_filepath = os.path.join(DATA_DIR, style_image_filename)
     style_image = Image.open(style_image_filepath)
 
