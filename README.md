@@ -3,9 +3,9 @@
 Use ML to create digital art
 
 ### Authors
-* John Jefferson III
+* [John Jefferson III](https://github.com/jjefferson1994)
 * Daniel Rodriguez
-* Michael Patel
+* [Michael Patel](https://github.com/mikepatel)
 
 ## Data
 * Using images from Wikimedia commons
