@@ -2,10 +2,8 @@
 ## Overview
 A GAN to create art
 
-![](https://github.com/mikepatel/GANja/blob/main/overview.png)
-
 ## Data
-* temporarily using [shoe images](https://github.com/mikepatel/GANja/tree/main/data/train), but this will change
+* TO DO
 
 ## Environment
 * Python 3.7
@@ -13,15 +11,11 @@ A GAN to create art
   * TensorFlow 2.1
 
 ## File descriptions
-* [model.py](https://github.com/mikepatel/GANja/blob/main/model.py) - for model definitions
-* [parameters.py](https://github.com/mikepatel/GANja/blob/main/parameters.py) - for model and training parameters
-* [train.py](https://github.com/mikepatel/GANja/blob/main/train.py) - for preprocessing and training
+* TO DO
 
 ## Instructions
 ### To train model
-```
-$ python train.py
-```
+TO DO
 
 ## Additional notes
 * currently not saving a trained model as training is still ongoing
