@@ -31,7 +31,7 @@ $ python style transfer/run.py
 ## Preliminary results
 | Content image input | Style image input | Generated output image |
 :------------:|:------------:|:------------:
-![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated_06-11-2020_16-41-32.jpg)
+![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_06-11-2020_16-41-32.jpg)
 
 ## Additional notes
 * currently not saving a trained model as training is still ongoing
