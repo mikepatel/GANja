@@ -76,7 +76,7 @@ if __name__ == "__main__":
     )
 
     # Style image
-    style_image_filename = "style.jpg"
+    style_image_filename = "style_pencil_drawn.jpg"
     style_image = preprocess_image(
         filename=style_image_filename,
         mode="style"
