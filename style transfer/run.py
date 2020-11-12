@@ -24,7 +24,7 @@ import tensorflow_hub as hub
 
 ################################################################################
 # directories
-DATA_DIR = os.path.join(os.getcwd(), "data")
+DATA_DIR = os.path.join(os.getcwd(), "style transfer\\data")
 
 
 ################################################################################
@@ -32,13 +32,15 @@ DATA_DIR = os.path.join(os.getcwd(), "data")
 def load_image(filename, mode):
     data_subdirectory = os.path.join(DATA_DIR, mode)
     filepath = os.path.join(data_subdirectory, filename)
+    name = filename.split("_")[1]  # split @ hyphen
+    name = str(name.split(".jpg")[0])  # split @ .jpg
     image = Image.open(filepath)
-    return image
+    return image, name
 
 
 # preprocess image
 def preprocess_image(filename, mode="content"):
-    image = load_image(filename, mode)
+    image, name = load_image(filename, mode)
 
     if mode is "style":
         # style image size should be 256x256
@@ -55,29 +57,21 @@ def preprocess_image(filename, mode="content"):
     # currently, batch size = 1
     image = np.expand_dims(image, axis=0)
 
-    return image
+    return image, name
 
 
-################################################################################
-# Main
-if __name__ == "__main__":
-    # environment setup
-    print(f'TF version: {tf.__version__}')
-    print(f'TF hub version: {hub.__version__}')
-    print(f'GPU available: {tf.test.is_gpu_available()}')
-
+# generate output image
+def generate_image(content_image_filename, style_image_filename):
     # ----- ETL ----- #
     # ETL = Extraction, Transformation, Load
-    # Content image
-    content_image_filename = "content.jpg"
-    content_image = preprocess_image(
+    # content image
+    content_image, content_name = preprocess_image(
         filename=content_image_filename,
         mode="content"
     )
 
-    # Style image
-    style_image_filename = "style_pencil_drawn.jpg"
-    style_image = preprocess_image(
+    # style image
+    style_image, style_name = preprocess_image(
         filename=style_image_filename,
         mode="style"
     )
@@ -91,20 +85,42 @@ if __name__ == "__main__":
         tf.constant(content_image),
         tf.constant(style_image)
     )
-    #print(f'Num outputs: {len(outputs)}')
+    # print(f'Num outputs: {len(outputs)}')
     output_image = outputs[0]
 
     # reshape: (WIDTH, HEIGHT, CHANNELS)
     output_image = tf.squeeze(output_image, axis=0)
-    #output_image = output_image * 255.0
+    # output_image = output_image * 255.0
 
     # tensor to image
     output_image = tf.keras.preprocessing.image.array_to_img(output_image)
-    #print(output_image)
-    #output_image.show()
+    # print(output_image)
+    # output_image.show()
 
     # save generated image
-    output_image_filename = "generated_" + datetime.now().strftime("%d-%m-%Y_%H-%M-%S") + ".jpg"
+    output_image_filename = "generated_" + content_name + "_" + style_name + ".jpg"
+    # output_image_filename = "generated_" + datetime.now().strftime("%d-%m-%Y_%H-%M-%S") + ".jpg"
     output_image_subdirectory = os.path.join(DATA_DIR, "generated")
     output_image_filepath = os.path.join(output_image_subdirectory, output_image_filename)
     output_image.save(output_image_filepath)
+
+
+################################################################################
+# Main
+if __name__ == "__main__":
+    # environment setup
+    print(f'TF version: {tf.__version__}')
+    print(f'TF hub version: {hub.__version__}')
+    print(f'GPU available: {tf.test.is_gpu_available()}')
+
+    # data directories
+    content_images = os.listdir(os.path.join(DATA_DIR, "content"))
+    style_images = os.listdir(os.path.join(DATA_DIR, "style"))
+
+    for c in content_images:
+        for s in style_images:
+            # generate image
+            generate_image(
+                content_image_filename=c,
+                style_image_filename=s
+            )
