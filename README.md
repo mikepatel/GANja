@@ -23,7 +23,7 @@ Use ML to create digital art
 ### To train model
 TO DO
 
-### To run model and generate output
+### To run model and generate output using style transfer technique
 1. Load content images (.jpg) into directory [data/content](https://github.com/mikepatel/GANja/tree/main/style%20transfer/data/content)
 2. Load style images (.jpg) into directory [data/style](https://github.com/mikepatel/GANja/tree/main/style%20transfer/data/style)
 3. Run python script [style transfer/run.py](https://github.com/mikepatel/GANja/blob/main/style%20transfer/run.py)
