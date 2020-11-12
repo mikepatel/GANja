@@ -33,8 +33,6 @@ $ python "style transfer/run.py"
 4. Generated images (.jpg) are saved into directory [data/generated](https://github.com/mikepatel/GANja/tree/main/style%20transfer/data/generated)
 
 ## Preliminary results
-See [data/generated](https://github.com/mikepatel/GANja/tree/main/style%20transfer/data/generated) for saved generated images
-
 | Content image input | Style image input | Generated output image |
 :------------:|:------------:|:------------:
 ![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_hill.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_wave.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_hill_wave.jpg)
