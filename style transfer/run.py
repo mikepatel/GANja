@@ -33,7 +33,7 @@ def load_image(filename, mode):
     data_subdirectory = os.path.join(DATA_DIR, mode)
     filepath = os.path.join(data_subdirectory, filename)
     name = filename.split("_")[1]  # split @ hyphen
-    name = str(name.split(".jpg")[0])  # split @ .jpg
+    name = str(name.split(".")[0])  # split @ .extension
     image = Image.open(filepath)
     return image, name
 
