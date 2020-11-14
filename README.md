@@ -49,7 +49,7 @@ $ python "style transfer/run.py"
 ![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_ship.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_vangogh.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_ship_vangogh.jpg)
 
 ## Additional notes
-* will use a different dataset in the future, possibly from [WikiArt](https://www.wikiart.org/)
+* use a different dataset in the future, possibly from [WikiArt](https://www.wikiart.org/)
 * use higher resolution style images
 
 ### Some things to try
