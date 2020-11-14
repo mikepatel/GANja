@@ -93,7 +93,9 @@ def generate_image(content_image_filename, style_image_filename):
 
     # reshape: (WIDTH, HEIGHT, CHANNELS)
     output_image = tf.squeeze(output_image, axis=0)
-    # output_image = output_image * 255.0
+
+    # [0, 1] --> [0, 255]
+    #output_image = output_image * 255.0
 
     # convert numpy array to PIL image
     output_image = tf.keras.preprocessing.image.array_to_img(output_image)
