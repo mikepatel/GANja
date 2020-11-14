@@ -50,6 +50,7 @@ $ python "style transfer/run.py"
 
 ## Additional notes
 * will use a different dataset in the future, possibly from [WikiArt](https://www.wikiart.org/)
+* use higher resolution style images
 
 ### Some things to try
 * Try a GAN
