@@ -32,8 +32,9 @@ DATA_DIR = os.path.join(os.getcwd(), "style transfer\\data")
 def load_image(filename, mode):
     data_subdirectory = os.path.join(DATA_DIR, mode)
     filepath = os.path.join(data_subdirectory, filename)
-    name = filename.split("_")[1]  # split @ underscore
-    name = str(name.split(".")[0])  # split @ .extension
+    if ("content" or "style") in filename:
+        filename = filename.split("_")[1]  # split @ underscore
+    name = str(filename.split(".")[0])  # split @ .extension
     image = Image.open(filepath)
     return image, name
 
