@@ -32,7 +32,7 @@ DATA_DIR = os.path.join(os.getcwd(), "style transfer\\data")
 def load_image(filename, mode):
     data_subdirectory = os.path.join(DATA_DIR, mode)
     filepath = os.path.join(data_subdirectory, filename)
-    name = filename.split("_")[1]  # split @ hyphen
+    name = filename.split("_")[1]  # split @ underscore
     name = str(name.split(".")[0])  # split @ .extension
     image = Image.open(filepath)
     return image, name
@@ -47,7 +47,7 @@ def preprocess_image(filename, mode="content"):
         # content image size can be arbitrary
         image = image.resize((256, 256))
 
-    # image to array
+    # convert PIL image to numpy array
     image = tf.keras.preprocessing.image.img_to_array(image)
 
     # normalize image: [0, 255] --> [0, 1]
@@ -56,6 +56,9 @@ def preprocess_image(filename, mode="content"):
     # reshape: (1, WIDTH, HEIGHT, CHANNELS)
     # currently, batch size = 1
     image = np.expand_dims(image, axis=0)
+
+    # convert numpy array to tensor
+    image = tf.convert_to_tensor(image)
 
     return image, name
 
@@ -82,8 +85,8 @@ def generate_image(content_image_filename, style_image_filename):
 
     # ----- GENERATE ----- #
     outputs = hub_module(
-        tf.constant(content_image),
-        tf.constant(style_image)
+        content_image,
+        style_image
     )
     # print(f'Num outputs: {len(outputs)}')
     output_image = outputs[0]
@@ -92,7 +95,7 @@ def generate_image(content_image_filename, style_image_filename):
     output_image = tf.squeeze(output_image, axis=0)
     # output_image = output_image * 255.0
 
-    # tensor to image
+    # convert numpy array to PIL image
     output_image = tf.keras.preprocessing.image.array_to_img(output_image)
     # print(output_image)
     # output_image.show()
