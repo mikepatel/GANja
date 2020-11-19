@@ -50,9 +50,9 @@ $ python "style transfer/run.py"
 
 ## Additional notes
 * use a different dataset in the future, possibly from [WikiArt](https://www.wikiart.org/)
-* use higher resolution style images
 
 ### Some things to try
+* use higher resolution style images
 * Try a GAN
   * make custom discriminator and generator models smaller (less deep)
   * use VGG16 classifier instead of a custom discriminator model
