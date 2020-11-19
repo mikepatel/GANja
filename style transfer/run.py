@@ -107,6 +107,9 @@ def generate_image(content_image_filename, style_image_filename):
     output_image_filename = "generated_" + content_name + "_" + style_name + ".jpg"
     # output_image_filename = "generated_" + datetime.now().strftime("%d-%m-%Y_%H-%M-%S") + ".jpg"
     output_image_subdirectory = os.path.join(DATA_DIR, "generated")
+    if not os.path.exists(output_image_subdirectory):
+        os.makedirs(output_image_subdirectory)
+
     output_image_filepath = os.path.join(output_image_subdirectory, output_image_filename)
     output_image.save(output_image_filepath)
 
@@ -115,9 +118,9 @@ def generate_image(content_image_filename, style_image_filename):
 # Main
 if __name__ == "__main__":
     # environment setup
-    print(f'TF version: {tf.__version__}')
-    print(f'TF hub version: {hub.__version__}')
-    print(f'GPU available: {tf.test.is_gpu_available()}')
+    #print(f'TF version: {tf.__version__}')
+    #print(f'TF hub version: {hub.__version__}')
+    #print(f'GPU available: {tf.test.is_gpu_available()}')
 
     # data directories
     content_images = os.listdir(os.path.join(DATA_DIR, "content"))
