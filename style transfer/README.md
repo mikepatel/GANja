@@ -1,6 +1,6 @@
-# GANja
+# GANja - style transfer
 ## Overview
-Use ML to create digital art
+Use ML style transfer to create digital art
 
 ### Authors
 * [John Jefferson III](https://github.com/jjefferson1994)
