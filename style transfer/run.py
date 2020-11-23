@@ -126,6 +126,7 @@ if __name__ == "__main__":
     content_images = os.listdir(os.path.join(DATA_DIR, "content"))
     style_images = os.listdir(os.path.join(DATA_DIR, "style"))
 
+    # m content images X n style images --> m x n output images
     for c in content_images:
         for s in style_images:
             # generate image
