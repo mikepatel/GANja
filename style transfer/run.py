@@ -82,13 +82,14 @@ def generate_image(content_image_filename, style_image_filename):
 
     # ---- MODEL ---- #
     hub_handle = 'https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2'
-    hub_module = hub.load(hub_handle)
+    model = hub.load(hub_handle)
 
     # ----- GENERATE ----- #
-    outputs = hub_module(
+    outputs = model(
         content_image,
         style_image
     )
+
     # print(f'Num outputs: {len(outputs)}')
     output_image = outputs[0]
 
