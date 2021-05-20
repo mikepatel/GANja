@@ -43,7 +43,7 @@ def load_image(filename, mode):
 def preprocess_image(filename, mode="content"):
     image, name = load_image(filename, mode)
 
-    if mode is "style":
+    if mode == "style":
         # style image size should be 256x256
         # content image size can be arbitrary
         image = image.resize((256, 256))
