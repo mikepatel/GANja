@@ -20,6 +20,7 @@ from datetime import datetime
 import shutil
 import glob
 import time
+import socket
 
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -199,4 +200,5 @@ if __name__ == "__main__":
     #print(f'TF hub version: {hub.__version__}')
     #print(f'GPU available: {tf.test.is_gpu_available()}')
 
-    app.run(host="192.168.1.9")
+    ip_address = socket.gethostbyname(socket.gethostname())
+    app.run(host=ip_address)
