@@ -10,6 +10,7 @@ Project description:
 
 File description:
     Loads and generates images using a Flask server
+
 """
 ################################################################################
 # Imports
