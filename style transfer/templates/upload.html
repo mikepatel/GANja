@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/upload.css')}}">
+<title>Upload</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+    <h1>Upload</h1>
+    <form method="post" enctype=multipart/form-data class="row">
+        <div class="col-6">
+            <h4>Select Content Image</h4>
+            <input type="file" name="content" onchange="readURL(this);">
+            <img id="blah" src="#" alt="your image" />
+        </div>
+
+        <div class="col-6">
+            <h4>Select Style Image</h4>
+            <input type="file" name="style" onchange="readURL2(this);">
+            <img id="blah2" src="#" alt="your image" />
+        </div>        
+        <input class="col-8 submit_btn" type="submit" value="Upload">
+    </form>
+</div>
+{% endblock %}
