@@ -16,13 +16,10 @@ Use ML style transfer to create digital art
 * Anaconda environment
   * TensorFlow 2.1
 
-## File descriptions
+## Files
 * [style transfer/run.py](https://github.com/mikepatel/GANja/blob/main/style%20transfer/run.py)
 
 ## Instructions
-### To train model
-TO DO
-
 ### To run model and generate output using style transfer technique
 1. Load content images into directory [data/content](https://github.com/mikepatel/GANja/tree/main/style%20transfer/data/content)
 2. Load style images into directory [data/style](https://github.com/mikepatel/GANja/tree/main/style%20transfer/data/style)
@@ -36,17 +33,11 @@ $ python "style transfer/run.py"
 | Content image input | Style image input | Generated output image |
 :------------:|:------------:|:------------:
 ![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_hill.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_wave.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_hill_wave.jpg)
-![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_hill.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_kandinsky.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_hill_kandinsky.jpg)
-![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_hill.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_pencilDrawn.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_hill_pencilDrawn.jpg)
-![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_hill.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_vangogh.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_hill_vangogh.jpg)
 ![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_dog.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_wave.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_dog_wave.jpg)
-![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_dog.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_kandinsky.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_dog_kandinsky.jpg)
-![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_dog.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_pencilDrawn.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_dog_pencilDrawn.jpg)
-![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_dog.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_vangogh.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_dog_vangogh.jpg)
 ![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_ship.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_wave.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_ship_wave.jpg)
-![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_ship.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_kandinsky.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_ship_kandinsky.jpg)
-![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_ship.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_pencilDrawn.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_ship_pencilDrawn.jpg)
-![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_ship.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/style_vangogh.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_ship_vangogh.jpg)
+![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_hill.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/pastel.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_hill_pastel.jpg)
+![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_dog.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/pastel.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_dog_pastel.jpg)
+![content](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/content/content_ship.jpg) | ![style](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/style/pastel.jpg) | ![output](https://github.com/mikepatel/GANja/blob/main/style%20transfer/data/generated/generated_ship_pastel.jpg)
 
 ## Additional notes
 * use a different dataset in the future, possibly from [WikiArt](https://www.wikiart.org/)
